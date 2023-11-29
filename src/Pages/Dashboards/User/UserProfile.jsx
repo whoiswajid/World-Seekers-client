@@ -15,14 +15,14 @@ const UserProfile = () => {
         const form = event.target;
         const name = form.name.value;
         const img = form.img.value;
-        const story = form.story.value;
+        const details = form.details.value;
         
 
-        const newStory = { name, img, story }
+        const newStory = { name, img, details }
 
         console.log(newStory)
 
-        fetch(``, {
+        fetch(`https://world-seeker-server.vercel.app/story`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -101,7 +101,7 @@ const UserProfile = () => {
                                     <label className="label">
                                         <span className="label-text">Add Your Story</span>
                                     </label>
-                                    <input type="text" name="story" placeholder="Add your Story" className="input input-bordered" />
+                                    <input type="text" name="details" placeholder="Add your Story" className="input input-bordered" />
                                 </div>
                                 <div className="form-control md:flex">
                                     <label className="label">
@@ -112,7 +112,7 @@ const UserProfile = () => {
                             </div>
                             <div className="form-control mt-6">
 
-                                <input className="btn bg-blue-400 text-white " type="submit" value="Donate" />
+                                <input className="btn bg-blue-400 text-white " type="submit" value="Add" />
                             </div>
                         </form>
                     </div>

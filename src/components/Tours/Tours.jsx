@@ -5,7 +5,7 @@ const Tours = () => {
 
     const [tours, setTours] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/tours')
+        fetch('https://world-seeker-server.vercel.app/tours')
         .then(res => res.json())
         .then(data => setTours(data))
     }, [])

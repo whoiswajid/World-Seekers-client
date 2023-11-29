@@ -27,6 +27,7 @@ import UserProfile from "../Pages/Dashboards/User/UserProfile";
 import MyBookings from "../Pages/Dashboards/User/MyBookings";
 import WishList from "../Pages/Dashboards/User/WishList";
 
+
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -57,9 +58,6 @@ export const router = createBrowserRouter([
         path: '/bookings/:id',
         element: <Bookings></Bookings>,
         loader: ({ params }) => fetch(`https://world-seeker-server.vercel.app/tours/${params.id}`),
-      },
-      {
-
       },
       {
         path: '/blogs',

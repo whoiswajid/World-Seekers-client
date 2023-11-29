@@ -8,6 +8,7 @@ import HomeTabs from "../../Tabs/HomeTabs";
 import Banner from "../Banner/Banner";
 
 
+
 const Home = () => {
     
     return (
@@ -15,6 +16,7 @@ const Home = () => {
             <Banner></Banner>
             <HomeTabs></HomeTabs>
             <Categories></Categories>
+            
         </div>
     );
 };
